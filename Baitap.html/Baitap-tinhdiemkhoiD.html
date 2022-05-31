@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1> Tính điểm ĐH khối D </h1>
+    Môn Toán <input id="diemtoan" size="10px" style="border: solid 1px;" type="text"> 
+    <br>
+    Môn Văn  <input id="diemvan" size="10px" style="border: solid 1px;" type="text">
+    <br>
+    Môn Anh  <input id="diemanh" size="10px"style="border: solid 1px;" type="text"> 
+    <br>
+    Khu Vực
+    <select id = area style="width: 100px;" >
+        <option value="0.75"> KV1 </option>
+        <option value="0.25"> KV2 </option>
+        <option value="0.5"> KV2-NT </option>
+        <option value="0"> KV3 </option>
+    </select>
+    <br>
+    <br>
+    <button onclick="tinhDiem() " >Tính Điểm</button>
+    <h3 id ="tongdiem" ></h3>
+</body>
+    <script>
+        function tinhDiem(){
+            let diemtoan = parseFloat(document.getElementById("diemtoan").value)
+            let diemvan = parseFloat(document.getElementById("diemvan").value)
+            let diemanh = parseFloat(document.getElementById("diemanh").value)
+            let khuvuc = document.getElementById("area").value
+            let tongdiemKV1 = diemtoan + diemvan + diemanh + 0.75
+            let tongdiemKV2 = diemtoan + diemvan + diemanh + 0.25
+            let tongdiemKV2NT = diemtoan + diemvan + diemanh + 0.5
+            let tongdiemKV3 = diemtoan + diemvan + diemanh 
+                switch (khuvuc){
+                    case "0.75":
+                        document.getElementById("tongdiem").innerHTML= tongdiemKV1;
+                        break;
+                    case "0.25":
+                        document.getElementById("tongdiem").innerHTML= tongdiemKV2;
+                        break;
+                    case "0.5":
+                        document.getElementById("tongdiem").innerHTML= tongdiemKV2NT;
+                        break;
+                    case "0":
+                        document.getElementById("tongdiem").innerHTML= tongdiemKV3;
+                        break;
+                }
+        }
+    </script>
+</html>
