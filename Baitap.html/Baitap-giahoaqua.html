@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Giá hoa quả</h1>
+    <input id="loaiqua" type="text">
+    <button onclick ="giaHoaqua() " >Xem giá</button>
+    <h2 id = "display" ></h2>
+</body>
+    <script>
+        function giaHoaqua(){
+            let tenhoaqua = document.getElementById("loaiqua").value
+            let Oi = "20000 VNĐ/KG "
+            let Duahau = "20000 VNĐ/KG "
+            let Tao = "30000 VNĐ/KG "
+            let Xoai = "30000 VNĐ/KG "
+            let Cam = "40000 VNĐ/KG "
+            let Chomchom = "40000 VNĐ/KG "
+            let Mangcut = "20000 VNĐ/KG "
+            switch (tenhoaqua){
+                case "Oi":
+                    document.getElementById("display").innerHTML = Oi;
+                break;
+                case "Duahau":
+                    document.getElementById("display").innerHTML = Duahau;
+                break;
+                case "Tao":
+                    document.getElementById("display").innerHTML = Tao;
+                break;
+                case "Xoai":
+                    document.getElementById("display").innerHTML = Xoai;
+                break;
+                case "Cam":
+                    document.getElementById("display").innerHTML = Cam;
+                break;
+                case "Chomchom":
+                    document.getElementById("display").innerHTML = Chomchom;
+                break;
+                case "Mangcut":
+                    document.getElementById("display").innerHTML = Mangcut;
+                break;
+            }
+        }
+        
+    </script>
+</html>
