@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+</head>
+<body>
+    <table>
+        <tr>
+            <th>Amount</th>
+            <th>From Currency</th>
+            <th>To Currency</th>
+        </tr>
+        <tr>
+            <td>
+                <input id="nhapsotien" type="text">
+            </td>
+            <td>
+                <select id="from" >
+                    <option value="1">VND</option>
+                    <option value="23000">USD</option>
+                    <option value="18000">UC</option>
+                </select>
+            </td>
+            <td>
+                <select id="to">
+                    <option value="1">VND</option>
+                    <option value="23000">USD</option>
+                    <option value="18000">UC</option>
+                </select>
+            </td>
+            <td>
+                <button onclick="chuyenDoi() " >Convert</button>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="4" id="result"></td>
+        </tr>
+    </table>
+</body>
+    <script>
+        function chuyenDoi(){
+            let sotiencanchuyen =document.getElementById("nhapsotien").value
+            let from = document.getElementById("from").value
+            let to = document.getElementById("to").value
+            // let result = (sotiencanchuyen * from) / to
+            if(from=="1" && to =="1"){
+                document.getElementById("result").innerHTML= (sotiencanchuyen*from)*to
+                }else if(from=="23000" && to=="1"){
+                    document.getElementById("result").innerHTML=(sotiencanchuyen*from)/to
+                        }else{
+                            document.getElementById("result").innerHTML= sotiencanchuyen
+                }
+
+         }
+    </script>
+</html>
