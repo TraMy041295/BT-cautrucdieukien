@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick ="chieucao() " >Nhập chiều cao , cân nặng</button>
+    
+</body>
+    <script>
+        function chieucao() {
+            let chieucao = prompt("Nhập vào chiều cao ...? ")
+            let cannang = prompt("Nhập vào cân nặng....?")
+            let BMI = cannang / Math.pow(chieucao,2)
+            // document.write(BMI)
+            if(BMI > 40 ){
+                alert("béo phì cấp độ III");
+            }else if(35 <= BMI && BMI < 40 ){
+                    alert("béo phì cấp độ II");
+            }else if(30 <= BMI && BMI < 35 ){
+                    alert("béo phì cấp độ I")
+            }else if(25 <= BMI && BMI < 30 ){
+                    alert("thừa cân")
+            } else if(18.5 <= BMI && BMI < 25 ){
+                    alert("bình thường")
+            } else if(17 <= BMI && BMI < 18.5){
+                    alert("gầy cấp độ I")
+            }else if(16 <= BMI && BMI < 17 ){
+                    alert("gầy cấp độ II")
+            } else 
+                    alert("gầy cấp độ III")
+            }        
+    </script>
+</html>
