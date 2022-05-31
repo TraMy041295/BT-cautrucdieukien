@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+    <script>
+        let namduonglich = +(prompt(" Nhập vào năm dương lịch"))
+        let can = namduonglich % 10
+        let chi = namduonglich % 12
+        let can0 = ""
+        let chi0 = ""
+        switch (can){
+            case 0:
+                can0 = "Canh"
+                break;
+            case 1:
+                can0 = "Tân"
+                break;
+            case 2:
+                can0 = "Nhâm"
+                break;
+            case 3:
+                can0 = "Quý"
+                break;
+            case 4:
+                can0 = "Giáp"
+                break;
+            case 5:
+                can0 = "Ất"
+                break;
+            case 6:
+                can0 = "Bính"
+                break;
+
+        }
+        switch (chi){
+            case 0:
+                chi0 = "Thân"
+                break;
+            case 1:
+                chi0  = "Dậu"
+                break;
+            case 2:
+                chi0 = "Tuất"
+                break;
+            case 3:
+                chi0 = "Hợi"
+                break;
+            case 4:
+                chi0 = "Tý"
+                break;
+            case 5:
+                chi0 = "Sửu"
+                break;
+            case 6:
+                chi0 = "Dần"
+                break;
+            case 7:
+                chi0 = "Mẹo"
+                break;
+        }
+        document.write("năm âm lịch là :" + can0 + chi0)
+       
+    </script>
+</html>
